@@ -10,7 +10,7 @@ collections:
     output: true
 email: info@voltagearc.com
 description: This is an example page.
-baseurl: /
+baseurl: "/"
 url: https://example.voltagearc.com
 twitter_username: jekyllrb
 github_username: jekyll
