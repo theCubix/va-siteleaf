@@ -10,11 +10,8 @@ collections:
     output: true
 email: info@voltagearc.com
 description: This is an example page.
-baseurl: 
-url: example.voltagearc.com
+baseurl: https://example.voltagearc.com
+url: https://example.voltagearc.com
 twitter_username: jekyllrb
 github_username: jekyll
 markdown: kramdown
-theme: minima
-plugins:
-- jekyll-feed
