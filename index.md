@@ -3,4 +3,4 @@ title: Feels like home
 layout: home
 ---
 
-Hoi schnusel.
+# Hoi Pilz.
