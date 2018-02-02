@@ -1,23 +1,23 @@
 <nav id="appNavigation" class="navigation">
 
   <a href="#/" id="appNavMenuButton" class="navigation__link navigation__link--visible navigation__link--menu">
-    <img src="assets/menu-icon.svg" alt="Menu icon" class="navigation__icon">
+    <img src="/assets/menu-icon.svg" alt="Menu icon" class="navigation__icon">
   </a>
 
   <a href="#/" id="appNavMenuCloseButton" class="navigation__link navigation__link--menu">
-    <img src="assets/close-icon.svg" alt="Close icon" class="navigation__icon">
+    <img src="/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
   </a>
 
-  <a href="#" class="navigation__link navigation__link--visible navigation__link--logo">
-    <img src="assets/logo.png" alt="Voltage Arc Icon (minimalistic)" class="navigation__icon">
+  <a href="{% if page.url == '/' %}#/{% else %}/{% endif %}" class="navigation__link navigation__link--visible navigation__link--logo">
+    <img src="/assets/logo.png" alt="Voltage Arc Icon (minimalistic)" class="navigation__icon">
   </a>
 
   <a href="#/" id="appNavSearchButton" class="navigation__link navigation__link--visible navigation__link--search">
-    <img src="assets/search-icon.svg" alt="Search icon" class="navigation__icon">
+    <img src="/assets/search-icon.svg" alt="Search icon" class="navigation__icon">
   </a>
 
   <a href="#/" id="appNavSearchCloseButton" class="navigation__link navigation__link--search">
-    <img src="assets/close-icon.svg" alt="Close icon" class="navigation__icon">
+    <img src="/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
   </a>
 
   <ul id="appNavList" class="navlist">
@@ -33,7 +33,7 @@
         <input class="navsearch__textinput" type="text" name="textsearch" id="searchinput" placeholder="Wonach suchst du?">
     </div>
     <button class="navsearch__button" type="submit">
-      <img class="navsearch__icon" src="assets/search-icon.svg" alt="">
+      <img class="navsearch__icon" src="/assets/search-icon.svg" alt="">
     </button>
   </form>
 
