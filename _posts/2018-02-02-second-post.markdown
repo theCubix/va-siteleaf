@@ -1,6 +1,7 @@
 ---
 title: Second post
 date: 2018-02-02 13:13:00 +01:00
+layout: post
 ---
 
 # This is post Nō2 on this page.
