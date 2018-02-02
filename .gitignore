@@ -2,4 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
+<<<<<<< HEAD
 
+=======
+>>>>>>> fd2cc4985338f8393db670a14ef6640ddd4be802
