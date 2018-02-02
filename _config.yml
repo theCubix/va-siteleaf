@@ -15,4 +15,5 @@ url: https://example.voltagearc.com
 twitter_username: jekyllrb
 github_username: jekyll
 markdown: kramdown
-exclude: ['sass']
+exclude:
+- sass
