@@ -1,0 +1,80 @@
+.kapitalism-background {
+  background: transparent;
+  @include desktop {
+    background-image: url('../assets/img/full_kapitalism.gif');
+    background-size: 128px;
+    background-repeat: repeat;
+    background-position-y: -32px;
+    padding: 6em 0;
+  }
+}
+
+.tpdc-grid {
+  display: grid;
+
+  grid-gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+
+  @include desktop {
+    grid-gap: 6rem 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.tpdc-image {
+  height: auto;
+  grid-column: 1;
+  width: 80%;
+
+  @include desktop {
+    grid-column: 1;
+  }
+}
+
+.tpdc-text {
+  grid-column: 1 / span 2;
+
+  @include desktop {
+    grid-column: 2 / span 2;
+  }
+}
+
+.tpdc-video {
+  grid-column: 1 / span 2;
+
+  @include desktop {
+    grid-column: 2 / span 2;
+  }
+
+  &__heading {
+    margin-bottom: 1em;
+  }
+
+  &__wrapper {
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &--1x1 {
+      padding-top: 100%;
+    }
+
+    &--16x9 {
+      padding-top: 56.25%;
+    }
+  }
+
+  &__iframe {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}

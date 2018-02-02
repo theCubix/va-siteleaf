@@ -1,0 +1,51 @@
+.section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 16px;
+
+  @include desktop {
+    padding: 0;
+  }
+
+  &--margin {
+    margin-top: 15em;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 2em;
+    margin: 0 0 0.7em;
+    position: relative;
+    z-index: 1;
+
+    @include desktop {
+      font-size: 3em;
+      margin: 0 0 1.5em 0;
+    }
+
+    &:after {
+      top: -0.35em;
+      left: -2%;
+
+      background-color: $red-d2;
+      content: ' ';
+      display: block;
+      height: 10px;
+      position: relative;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__lead {
+    font-weight: 500;
+  }
+
+  &__text {
+    line-height: 1.618em;
+
+    &--regular-line-height {
+      line-height: 1.2em;
+    }
+  }
+}

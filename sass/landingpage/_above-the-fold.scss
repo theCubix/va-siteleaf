@@ -1,0 +1,53 @@
+.section--atf {
+  top: 49px;
+
+  background-position: center;
+  background-size: cover;
+  padding-top: 44.3%;
+  position: relative;
+
+  @include desktop {
+    top: 0;
+
+    padding-top: 0;
+    height: 600px;
+    height: 90vh;
+  }
+}
+
+.atf {
+  &__text-wrapper {
+    margin-top: -1.25em;
+    position: absolute;
+
+    @include desktop {
+      margin-top: 230px;
+      margin-top: 35vh;
+      position: absolute;
+    }
+  }
+
+  &__title {
+    font-size: 2.5em;
+    position: relative;
+
+    @include desktop {
+      left: -2rem;
+
+      background-color: $red-pr;
+      display: inline;
+      font-size: 6em;
+      line-height: 6rem;
+      padding: 0 2rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+
+    @include desktop {
+      width: 470px;
+    }
+  }
+}

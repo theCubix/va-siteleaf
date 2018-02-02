@@ -1,0 +1,28 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+  font-family: 'Roboto Condensed', condensed;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p,
+a,
+span,
+button {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+.t-invert {
+  color: #131313;
+}
+
+.nomargin {
+  margin: 0;
+}

@@ -1,0 +1,35 @@
+body {
+  background-color: $dark-pr;
+  margin: 0;
+  font-size: 14px;
+}
+
+.lock-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.seperator {
+  height: 2px;
+  background-color: $red-pr;
+  position: relative;
+  width: 30px;
+}
+
+.hide-on-phone {
+  @include phone {
+    display: none!important;
+  }
+}
+
+.hide-on-tablet {
+  @include tablet {
+    display: none!important;
+  }
+}
+
+.hide-on-desktop {
+  @include desktop {
+    display: none!important;
+  }
+}

@@ -1,0 +1,114 @@
+.miol-grid {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+
+  @include desktop {
+    grid-gap: 6rem 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+.miol-video {
+  grid-column: 1 / span 2;
+
+  &__heading {
+    margin-bottom: 1em;
+  }
+
+  &__wrapper {
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &--1x1 {
+      padding-top: 100%;
+    }
+
+    &--16x9 {
+      padding-top: 56.25%;
+    }
+  }
+
+  &__iframe {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  &--right-aligned {
+    grid-column: 1 / span 2;
+
+    @include desktop {
+      grid-row: 3;
+      grid-column: 2 / span 3;
+    }
+  }
+}
+
+.miol-text {
+  grid-column: 1 / span 2;
+
+  @include desktop {
+    box-sizing: border-box;
+    grid-column: 3 / span 2;
+    hyphens: auto;
+    padding: 2em;
+    text-align: justify;
+  }
+}
+
+.miol-dude {
+  position: relative;
+  width:  100%;
+
+  @include desktop {
+    grid-row: 2;
+  }
+
+  &__image {
+    border-radius: 3px;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__description {
+    left: -0.7em;
+    top: -1.5em;
+
+    color: white;
+    position: relative;
+  }
+
+  &__name {
+    font-family: 'Roboto Condensed';
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0 0 0.2em 0;
+    text-transform: uppercase;
+  }
+
+  &__seperator {
+    left: 0.7em;
+  }
+
+  &__function {
+    left: 0.7em;
+
+    font-family: 'Roboto';
+    font-size: 1.3em;
+    font-weight: 300;
+    margin: 0.5em 0 0 0;
+    position: relative;
+  }
+}

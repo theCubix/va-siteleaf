@@ -1,0 +1,233 @@
+.navigation {
+  top: 0;
+  right: 0;
+  left: 0;
+
+  background-color: rgba($dark-pr, 0);
+  height: 49px;
+  position: fixed;
+  transition: background-color 500ms ease, height 500ms ease;
+  width: 100%;
+  z-index: 999;
+
+  &--bg-visible {
+    background-color: rgba($dark-pr, 0.9);
+  }
+
+  &--elapsed {
+    background-color: rgba($dark-pr, 1);
+    height: 100%;
+  }
+
+  &__link {
+    box-sizing: border-box;
+    height: 49px;
+    opacity: 0;
+    padding: 16px;
+    transition: opacity 300ms ease;
+    width: 49px;
+    visibility: hidden;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &--menu {
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      position: absolute;
+
+      @include desktop {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--logo {
+      @include phone {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      @include tablet {
+        top: 0;
+        left: 0;
+
+        display: inline-block;
+        position: absolute;
+      }
+
+      @include desktop {
+        top: 0;
+        left: 0;
+
+        display: inline-block;
+        position: absolute;
+      }
+    }
+
+    &--search {
+      top: 0;
+      right: 0;
+
+      display: inline-block;
+      position: absolute;
+    }
+  }
+
+  &__icon {
+    height: 17px;
+    width: 17px;
+  }
+}
+
+.navlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: opacity 200ms ease;
+  width: 100%;
+
+  @include phone {
+    margin-top: 2em;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &--elapsed {
+    @include phone {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+    margin: 16px auto;
+    justify-content: space-between;
+    width: 300px
+  }
+
+  @include desktop {
+    display: flex;
+    margin: 16px auto;
+    justify-content: space-between;
+    width: 500px
+  }
+
+  &__item {
+    font-size: 1em;
+    line-height: 17px;
+
+    @include phone {
+      opacity: 0;
+      transform: translateY(-7px);
+      transition: opacity 1s, transform 500ms;
+    }
+
+    &--visible {
+      @include phone {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__link {
+    font-size: 1em;
+    line-height: 17px;
+    text-decoration: none;
+
+    @include phone {
+      display: block;
+      padding: 10px 16px;
+      font-family: 'Roboto Condensed';
+      font-size: 2em;
+      font-weight: 700;
+      line-height: 2rem;
+    }
+  }
+}
+
+.navsearch {
+  box-sizing: border-box;
+  margin: 2em auto;
+  opacity: 0;
+  position: relative;
+  transition: opacity 200ms ease;
+  visibility: hidden;
+
+  @include phone {
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  @include tablet {
+    margin-top: 3em;
+    width: 300px;
+  }
+
+  @include desktop {
+    margin-top: 5em;
+    width: 500px;
+  }
+
+  &--elapsed {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__textinput-wrapper {
+    border-bottom: 1px solid #ffffff;
+    box-sizing: border-box;
+    height: 30px;
+    padding-left: 33px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__textinput {
+    top: 0;
+
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 21px;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__button {
+    top: 0;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    transition: opacity 300ms ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__icon {
+    height: 21px;
+    width: 21px;
+  }
+}
