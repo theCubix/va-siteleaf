@@ -67,9 +67,6 @@
 }
 
 .miol-dude {
-  position: relative;
-  width:  100%;
-
   @include desktop {
     grid-row: 2;
   }
@@ -79,6 +76,12 @@
     height: auto;
     overflow: hidden;
     width: 100%;
+  }
+
+  &__bgimage {
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
   }
 
   &__description {
