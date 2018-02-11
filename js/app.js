@@ -85,15 +85,6 @@ function hideSearch() {
   navSearchClose.classList.remove('navigation__link--visible')
 }
 
-//window.addEventListener('resize', autoHideNavList)
-
-//function autoHideNavList() {
-//  screenWidth = window.innerWidth || document.documentElement.clientWidth || document.documentElement.getElementsByTagName('body')[0]
-//  if (screenWidth >= 768 && navList.classList.contains('navlist--elapsed') ) {
-//    navList.classList.remove('navlist--elapsed')
-//  }
-//}
-
 //automatically add background to nav on scroll
 window.addEventListener('scroll', scroll)
 
@@ -117,3 +108,33 @@ function showNav(scrollPosition) {
     nav.classList.remove('navigation--bg-visible')
   }
 }
+
+document.addEventListener('scroll', function () {
+	//save the amount of pixels scrolled to the pageTop variable
+	var pageTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+  //get the height of the document
+  var pageHeight = window.innerHeight;
+  
+  //set the fadein threshold
+  var pageBottom = pageTop + pageHeight;
+  
+  //get the the fade in triggers
+  var fadeInTriggers = document.getElementsByClassName('fadein__content');
+  
+  //check if elements should be shown
+  for (var i = 0; i < fadeInTriggers.length; i++) {
+
+		//get the active element
+		var fadeInTrigger = fadeInTriggers[i];
+    
+    //get the actives element top position
+    var fadeInTriggerTop = fadeInTrigger.offsetTop;
+    console.log('index ' + i + ' page bottom ' + pageBottom + ' fade in trigger position ' + fadeInTriggerTop);
+    //
+		if (fadeInTriggerTop + 100 < pageBottom) {
+	    fadeInTrigger.classList.remove('fadein__content--inactive');
+      fadeInTrigger.classList.add('fadein__content--active');
+    }
+  }
+})
