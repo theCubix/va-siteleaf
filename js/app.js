@@ -132,7 +132,7 @@ document.addEventListener('scroll', function () {
     var fadeInTriggerTop = fadeInTrigger.offsetTop;
     console.log('index ' + i + ' page bottom ' + pageBottom + ' fade in trigger position ' + fadeInTriggerTop);
     //
-		if (fadeInTriggerTop + 100 < pageBottom) {
+		if (fadeInTriggerTop + 30 < pageBottom) {
 	    fadeInTrigger.classList.remove('fadein__content--inactive');
       fadeInTrigger.classList.add('fadein__content--active');
     }
