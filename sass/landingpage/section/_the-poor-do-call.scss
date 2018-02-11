@@ -23,13 +23,16 @@
   }
 }
 
-.tpdc-image {
-  height: auto;
-  grid-column: 1;
-  width: 80%;
+.tpdc-bgimage {
+  &__wrapper {
+    width: 80%;
+  }
 
-  @include desktop {
+  &__content {
+    background-position: center;
+    background-size: cover;
     grid-column: 1;
+    padding-top: 135.23%;
   }
 }
 
