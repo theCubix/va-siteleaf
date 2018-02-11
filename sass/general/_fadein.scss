@@ -1,0 +1,42 @@
+.fadein__content {
+  
+  &.fadein__img {
+    transition: width $anim-dur $anim-eas;
+  }
+
+  &.fadein__text {
+    transition: opacity $anim-dur $anim-eas;
+  }
+
+  &.fadein__video {
+    transition: opacity $anim-dur $anim-eas;
+  }
+
+  &--inactive {
+    &.fadein__img {
+      width: 0%;
+    }
+
+    &.fadein__text {
+      opacity: 0;
+    }
+
+    &.fadein__video {
+      opacity: 0;
+    }
+  }
+  
+  &--active {
+    &.fadein__img {
+      width: 100%;
+    }
+    
+    &.fadein__text {
+      opacity: 1;
+    }
+
+    &.fadein__video {
+      opacity: 1;
+    }
+  }
+}
