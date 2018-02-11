@@ -1,5 +1,6 @@
 /* Dark | Black */
 /* Red */
+/* Timing */
 body {
   background-color: #130000;
   margin: 0;
@@ -101,6 +102,33 @@ button {
     .section__text--regular-line-height {
       line-height: 1.2em; }
 
+.fadein__content.fadein__img {
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); }
+
+.fadein__content.fadein__text {
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1); }
+
+.fadein__content.fadein__video {
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1); }
+
+.fadein__content--inactive.fadein__img {
+  width: 0%; }
+
+.fadein__content--inactive.fadein__text {
+  opacity: 0; }
+
+.fadein__content--inactive.fadein__video {
+  opacity: 0; }
+
+.fadein__content--active.fadein__img {
+  width: 100%; }
+
+.fadein__content--active.fadein__text {
+  opacity: 1; }
+
+.fadein__content--active.fadein__video {
+  opacity: 1; }
+
 .section--atf {
   top: 49px;
   background-position: center;
@@ -191,38 +219,45 @@ button {
       padding: 2em;
       text-align: justify; } }
 
-.miol-dude {
-  position: relative;
+@media (min-width: 1024px) {
+  .miol-dude {
+    grid-row: 2; } }
+
+.miol-dude__image {
+  border-radius: 3px;
+  height: auto;
+  overflow: hidden;
   width: 100%; }
-  @media (min-width: 1024px) {
-    .miol-dude {
-      grid-row: 2; } }
-  .miol-dude__image {
-    border-radius: 3px;
-    height: auto;
-    overflow: hidden;
-    width: 100%; }
-  .miol-dude__description {
-    left: -0.7em;
-    top: -1.5em;
-    color: white;
-    position: relative; }
-  .miol-dude__name {
-    font-family: 'Roboto Condensed';
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    margin: 0 0 0.2em 0;
-    text-transform: uppercase; }
-  .miol-dude__seperator {
-    left: 0.7em; }
-  .miol-dude__function {
-    left: 0.7em;
-    font-family: 'Roboto';
-    font-size: 1.3em;
-    font-weight: 300;
-    margin: 0.5em 0 0 0;
-    position: relative; }
+
+.miol-dude__bgimage {
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center; }
+
+.miol-dude__description {
+  left: -0.7em;
+  top: -1.5em;
+  color: white;
+  position: relative; }
+
+.miol-dude__name {
+  font-family: 'Roboto Condensed';
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.2em 0;
+  text-transform: uppercase; }
+
+.miol-dude__seperator {
+  left: 0.7em; }
+
+.miol-dude__function {
+  left: 0.7em;
+  font-family: 'Roboto';
+  font-size: 1.3em;
+  font-weight: 300;
+  margin: 0.5em 0 0 0;
+  position: relative; }
 
 .kapitalism-background {
   background: transparent; }
