@@ -221,15 +221,15 @@ button {
     grid-row: 2; } }
 
 .miol-dude__image {
-  border-radius: 3px;
   height: auto;
-  overflow: hidden;
   width: 100%; }
 
 .miol-dude__bgimage {
-  padding-top: 100%;
+  background-position: center;
   background-size: cover;
-  background-position: center; }
+  border-radius: 3px;
+  overflow: hidden;
+  padding-top: 100%; }
 
 .miol-dude__description {
   left: -0.7em;
@@ -277,13 +277,14 @@ button {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr); } }
 
-.tpdc-image {
-  height: auto;
-  grid-column: 1;
+.tpdc-bgimage__wrapper {
   width: 80%; }
-  @media (min-width: 1024px) {
-    .tpdc-image {
-      grid-column: 1; } }
+
+.tpdc-bgimage__content {
+  background-position: center;
+  background-size: cover;
+  grid-column: 1;
+  padding-top: 135.23%; }
 
 .tpdc-text {
   grid-column: 1 / span 2; }
