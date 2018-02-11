@@ -4,6 +4,11 @@ body {
   font-size: 14px;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 .lock-scroll {
   height: 100%;
   overflow: hidden;
