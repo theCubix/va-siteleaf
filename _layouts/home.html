@@ -2,10 +2,75 @@
 layout: base
 ---
 
-<div class="container">
-  {{ content }}
+<section id="appLandingPageBackgroundImage" class="section section--atf" style="background-image: url('/uploads/atf-image.jpg')">
+  <div class="container atf">
+      <div class="atf__text-wrapper">
+          <h1 class="atf__title nomargin">Break Free!</h1>
+          <p class="atf__text">Ein Trip mit Voltage Arc – die Schweizer Newcomer Rockband</p>
+      </div>
+  </div>
+</section>
 
-  {% for post in site.posts %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</div>
+<section class="section section--margin">
+  <div class="container miol">
+    <h2 class="section__title nomargin fadein__content fadein__content--inactive fadein__text">Music Is (Our) Life</h2>
+    
+    <div class="miol-grid">
+      <div class="miol-video fadein__content fadein__content--inactive fadein__video">
+        <div class="miol-video__wrapper miol-video__wrapper--1x1">
+            <iframe class="miol-video__iframe" width="560" height="315" src="https://www.youtube.com/embed/tyvSVg-Rh9g?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="miol-text fadein__content fadein__content--inactive fadein__text">
+        <p class="section__lead">Musik ist für uns mehr als nur ein Zeitvertreib.</p>
+        <div class="seperator"></div>
+        <p class="section__text">Vielmehr stellt sie einen zentralen Teil unseres Lebensinhalts dar. Die unterschiedlichste Musikstile bilden hierbei die Inspirationsquelle unserer Werke, wodurch alle unserer Songs einen ganz eigenen, individuellen Charakter erhalten.</p>
+        <p class="section__text">Doch etwas haben sie alle gemeinsam: die Energie und Begeisterung, die wir in unsere Musik hineinstecken und die sich darin zweifelslos widerspiegeln.</p>
+      </div>
+
+      <div class="miol-dude">
+        <div class="miol-dude__bgimage fadein__content fadein__content--inactive fadein__img" style="background-image: url('/uploads/band/toni.jpg')"></div>
+        <div class="miol-dude__description fadein__content fadein__content--inactive fadein__text">
+          <h2 class="miol-dude__name">Toni</h2>
+          <div class="miol-dude__seperator seperator"></div>
+          <p class="miol-dude__function">Vocals</p>
+        </div>
+      </div>
+
+      <div class="miol-dude">
+        <div class="miol-dude__bgimage fadein__content fadein__content--inactive fadein__img" style="background-image: url('/uploads/band/julian.jpg')"></div>
+        <div class="miol-dude__description fadein__content fadein__content--inactive fadein__text">
+          <h2 class="miol-dude__name">Julian</h2>
+          <div class="miol-dude__seperator seperator"></div>
+          <p class="miol-dude__function">Bass</p>
+        </div>
+      </div>
+
+      <div class="miol-dude">
+        <div class="miol-dude__bgimage fadein__content fadein__content--inactive fadein__img" style="background-image: url('/uploads/band/merlin.jpg')"></div>
+        <div class="miol-dude__description fadein__content fadein__content--inactive fadein__text">
+          <h2 class="miol-dude__name">Merlin</h2>
+          <div class="miol-dude__seperator seperator"></div>
+          <p class="miol-dude__function">Guitar</p>
+        </div>
+      </div>
+
+      <div class="miol-dude">
+        <div class="miol-dude__bgimage fadein__content fadein__content--inactive fadein__img" style="background-image: url('/uploads/band/timon.jpg')"></div>
+        <div class="miol-dude__description fadein__content fadein__content--inactive fadein__text">
+          <h2 class="miol-dude__name">Timon</h2>
+          <div class="miol-dude__seperator seperator"></div>
+          <p class="miol-dude__function">Schlagzeug</p>
+        </div>
+      </div>
+
+      <div class="miol-video miol-video--right-aligned fadein__content fadein__content--inactive fadein__video">
+        <h3 class="nomargin miol-video__heading">On Record:</h3>
+        <div class="miol-video__wrapper miol-video__wrapper--16x9">
+            <iframe class="miol-video__iframe" width="560" height="315" src="https://www.youtube.com/embed/0sFvFVkeGVg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
