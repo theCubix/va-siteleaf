@@ -16,20 +16,6 @@
 }
 
 .atf {
-  &__background-image {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
-
   &__text-wrapper {
     margin-top: -1.25em;
     position: absolute;
