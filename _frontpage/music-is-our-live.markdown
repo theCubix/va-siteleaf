@@ -1,6 +1,7 @@
 ---
 title: Music Is Our Life
 date: 2018-02-17 21:56:00 +01:00
+published: false
 video: https://www.youtube.com/embed/tyvSVg-Rh9g?rel=0&amp;showinfo=0
 ---
 
