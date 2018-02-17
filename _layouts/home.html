@@ -11,22 +11,22 @@ layout: base
   </div>
 </section>
 
+{% for item in site.frontpage %}
+
+{% if item.title == 'Music Is Our Life' %}
 <section class="section section--margin">
   <div class="container miol">
-    <h2 class="section__title nomargin fadein__content fadein__content--inactive fadein__text">Music Is (Our) Life</h2>
+    <h2 class="section__title nomargin fadein__content fadein__content--inactive fadein__text">{{ item.title }}</h2>
     
     <div class="miol-grid">
       <div class="miol-video fadein__content fadein__content--inactive fadein__video">
         <div class="miol-video__wrapper miol-video__wrapper--1x1">
-            <iframe class="miol-video__iframe" width="560" height="315" src="https://www.youtube.com/embed/tyvSVg-Rh9g?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="miol-video__iframe" width="560" height="315" src="{{ item.video }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="miol-text fadein__content fadein__content--inactive fadein__text">
-        <p class="section__lead">Musik ist für uns mehr als nur ein Zeitvertreib.</p>
-        <div class="seperator"></div>
-        <p class="section__text">Vielmehr stellt sie einen zentralen Teil unseres Lebensinhalts dar. Die unterschiedlichste Musikstile bilden hierbei die Inspirationsquelle unserer Werke, wodurch alle unserer Songs einen ganz eigenen, individuellen Charakter erhalten.</p>
-        <p class="section__text">Doch etwas haben all unsere Songs gemeinsam: die Energie und Begeisterung, die wir in unsere Musik hineinstecken und die sich darin zweifelslos widerspiegeln.</p>
+        {{ item.content }}
       </div>
 
       <div class="miol-dude">
@@ -74,6 +74,7 @@ layout: base
     </div>
   </div>
 </section>
+{% endif %}
 
 <section class="section section--margin kapitalism-background">
   <div class="container">
@@ -126,3 +127,4 @@ layout: base
       </div>
   </div>
 </section>
+{% endfor %}
