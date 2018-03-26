@@ -1,0 +1,58 @@
+.footer {
+  background-color: $dark-l1;
+  margin: 48px 0 0 0;
+  padding: 24px 0 0 0;
+  width: 100%;
+
+  &-social-media {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 16px;
+    
+
+    @include tablet {
+      padding: 0;
+      width: 300px;
+    }
+
+    @include desktop {
+      padding: 0;
+      width: 500px;
+    }
+
+    &__link {
+      text-decoration: none;
+    }
+
+    &__icon {
+      width: $footer-icon-size;
+      height: $footer-icon-size;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &-links {
+    box-sizing: border-box;
+    margin: 36px auto;
+    padding: 0 16px;
+
+    @include tablet {
+      padding: 0;
+      width: 300px;
+    }
+
+    @include desktop {
+      padding: 0;
+      width: 500px;
+    }
+  }
+
+  &-seperator {
+    height: 24px;
+    width: 100%;
+    background-color: $dark-l2;
+  }
+}
