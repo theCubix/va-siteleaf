@@ -66,6 +66,10 @@
       @include tablet {
         grid-template-columns: repeat(3, 1fr);
       }
+
+      @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     @include tablet {
@@ -86,7 +90,7 @@
   &-seperator {
     background-color: $dark-l2;
     box-sizing: border-box;
-    margin-top: ($footer-icon-size / 2);
+    margin-top: ($footer-icon-size / 4);
     padding: ($footer-icon-size / 6) 0;
     width: 100%;
 
