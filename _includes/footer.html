@@ -1,26 +1,62 @@
 <footer class="footer">
+
   <div class="container">
+
     <div class="footer-social-media">
+
         <!-- YouTube -->
         {% include icon-youtube.html %}
+
         <!-- Facebook -->
         {% include icon-facebook.html %}
+
         <!-- Instagram -->
         {% include icon-instagram.html %}
+
         <!-- Snapchat -->
         {% include icon-snapchat.html %}
+
       </div>
-      
+
     <img src="https://via.placeholder.com/320x80?text=Turtle+Insane" alt="Turtle Insane" class="footer-logo">
-      
+
     <div class="footer-links">
-      <div class="footer-links__section-one">
-        <h3 class="nomargin">Links</h3>
+
+      <div class="footer-links__section">
+        <h3 class="nomargin">Hol dir unsere Musik</h3>
+        <div class="footer-links__wrapper">
+            <p><a href="#" class="footer-links__link">Spotify</a></p>
+            <p><a href="#" class="footer-links__link">Apple Music</a></p>
+            <p><a href="#" class="footer-links__link">iTunes</a></p>
+            <p><a href="#" class="footer-links__link">Google Play Music</a></p>
+            <p><a href="#" class="footer-links__link">Amazon</a></p>
+        </div>
       </div>
+
+      <div class="footer-links__section">
+        <h3 class="nomargin">Weitere Seiten</h3>
+        <p><a href="#" class="footer-links__link">Videos</a></p>
+        <p><a href="#" class="footer-links__link">Music</a></p>
+        <p><a href="#" class="footer-links__link">Gallery</a></p>
+        <p><a href="#" class="footer-links__link">Shows</a></p>
+        <p><a href="#" class="footer-links__link">News</a></p>
+      </div>
+
+      <div class="footer-links__section">
+        <h3 class="nomargin">Kontakt</h3>
+        <p><a href="mailto:info@voltagearc.com" class="footer-links__link">info@voltagearc.com</a></p>
+        <p><a href="#" class="footer-links__link">Buchen</a></p>
+      </div>
+
     </div>
 
   </div>
 
-<div class="footer-seperator"></div>
+<div class="footer-seperator">
+  <div class="container">
+    <span class="footer-seperator__text">&copy;&nbsp;Voltage Arc {{ 'now' | date: "%Y" }}</span>
+    <span class="footer-seperator__text footer-seperator__text--right"><a class="footer-seperator--link" href="#">Impressum</a></span>
+  </div>
+</div>
 
 </footer>

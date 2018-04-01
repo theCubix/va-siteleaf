@@ -10,14 +10,12 @@
     padding: 0 16px;
     display: flex;
 
-    @include tablet {
+     @include tablet {
       padding: 0;
-      width: 300px;
     }
 
     @include desktop {
       padding: 0;
-      width: 780px;
     }
 
     &__link {
@@ -42,26 +40,68 @@
       transition: fill 300ms $anim-eas;
     }
   }
+  
+  &-logo {
+    margin-top: ($footer-icon-size / 2);
+    width: 200px;
+
+    @include phone {
+      padding-left: 16px;
+    }
+  }
 
   &-links {
     box-sizing: border-box;
-    margin: 36px auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: ($footer-icon-size / 2);
     padding: 0 16px;
+
+    @supports (display: grid) {
+      display: grid;
+      grid-gap: 16px;
+
+      grid-template: 1fr;
+
+      @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
     @include tablet {
       padding: 0;
-      width: 300px;
     }
 
     @include desktop {
       padding: 0;
-      width: 780px;
+    }
+
+    &__link {
+      margin: 0.5em 0;
+      opacity: $opacity-secondary;
+      text-decoration: none;
     }
   }
 
   &-seperator {
-    height: 24px;
-    width: 100%;
     background-color: $dark-l2;
+    box-sizing: border-box;
+    margin-top: ($footer-icon-size / 2);
+    padding: ($footer-icon-size / 6) 0;
+    width: 100%;
+
+    @include phone {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    &__text {
+      font-size: 0.85em;
+      opacity: $opacity-secondary;
+
+      &--right {
+        float: right;
+      }
+    }
   }
 }
