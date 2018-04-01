@@ -19,6 +19,14 @@
     height: 100%;
   }
 
+  &__wrapper {
+    @include desktop {
+      position: relative;
+      margin: 0 auto;
+      max-width: 805px;
+    }
+  }
+
   &__link {
     box-sizing: border-box;
     height: 49px;
