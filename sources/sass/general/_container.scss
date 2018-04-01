@@ -2,5 +2,12 @@
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 100%;
-  width: 780px;
+  
+  @include tablet {
+    width: 500px;
+  }
+
+  @include desktop {
+    width: 780px;
+  }
 }
