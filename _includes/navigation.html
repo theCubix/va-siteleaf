@@ -1,24 +1,28 @@
 <nav id="appNavigation" class="navigation">
 
-  <a href="#/" id="appNavMenuButton" class="navigation__link navigation__link--visible navigation__link--menu">
-    <img src="{{ baseUrl }}/uploads/assets/menu-icon.svg" alt="Menu icon" class="navigation__icon">
-  </a>
+  <div class="navigation__wrapper">
 
-  <a href="#/" id="appNavMenuCloseButton" class="navigation__link navigation__link--menu">
-    <img src="{{ baseUrl }}/uploads/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
-  </a>
+    <a href="#/" id="appNavMenuButton" class="navigation__link navigation__link--visible navigation__link--menu">
+      <img src="{{ baseUrl }}/uploads/assets/menu-icon.svg" alt="Menu icon" class="navigation__icon">
+    </a>
 
-  <a href="{% if page.url == '/' %}#/{% else %}/{% endif %}" class="navigation__link navigation__link--visible navigation__link--logo">
-    <img src="{{ baseUrl }}/uploads/assets/logo.png" alt="Voltage Arc Icon (minimalistic)" class="navigation__icon">
-  </a>
+    <a href="#/" id="appNavMenuCloseButton" class="navigation__link navigation__link--menu">
+      <img src="{{ baseUrl }}/uploads/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
+    </a>
 
-  <a href="#/" id="appNavSearchButton" class="navigation__link navigation__link--visible navigation__link--search">
-    <img src="{{ baseUrl }}/uploads/assets/search-icon.svg" alt="Search icon" class="navigation__icon">
-  </a>
+    <a href="{% if page.url == '/' %}#/{% else %}/{% endif %}" class="navigation__link navigation__link--visible navigation__link--logo">
+      <img src="{{ baseUrl }}/uploads/assets/logo.png" alt="Voltage Arc Icon (minimalistic)" class="navigation__icon">
+    </a>
 
-  <a href="#/" id="appNavSearchCloseButton" class="navigation__link navigation__link--search">
-    <img src="{{ baseUrl }}/uploads/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
-  </a>
+    <a href="#/" id="appNavSearchButton" class="navigation__link navigation__link--visible navigation__link--search">
+      <img src="{{ baseUrl }}/uploads/assets/search-icon.svg" alt="Search icon" class="navigation__icon">
+    </a>
+
+    <a href="#/" id="appNavSearchCloseButton" class="navigation__link navigation__link--search">
+      <img src="{{ baseUrl }}/uploads/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
+    </a>
+
+  </div>
 
   <ul id="appNavList" class="navlist">
     <li class="navlist__item"><a href="/videos/" class="navlist__link">Videos</a></li>
