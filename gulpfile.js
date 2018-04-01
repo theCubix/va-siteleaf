@@ -45,3 +45,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['watch']);
+
+gulp.task('build', ['jshint', 'build-js', 'build-css']);
