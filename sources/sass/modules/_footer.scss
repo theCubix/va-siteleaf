@@ -1,16 +1,14 @@
 .footer {
   background-color: $dark-l1;
-  margin: 48px 0 0 0;
-  padding: 24px 0 0 0;
+  margin: $footer-icon-size 0 0 0;
+  padding: ($footer-icon-size / 2) 0 0 0;
   width: 100%;
 
   &-social-media {
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
     margin: 0 auto;
     padding: 0 16px;
-    
+    display: flex;
 
     @include tablet {
       padding: 0;
@@ -23,14 +21,25 @@
     }
 
     &__link {
+      border-radius: 50%;
+      display: block;
+      height: $footer-icon-size;
+      overflow: hidden;
       text-decoration: none;
+      width: $footer-icon-size;
+      margin-right: ($footer-icon-size / 2);
+    }
+
+    &__link:hover svg g .footer-social-media__icon-border {
+      fill: rgba(255, 255, 255, 0.8)
     }
 
     &__icon {
-      width: $footer-icon-size;
-      height: $footer-icon-size;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+    }
+
+    &__icon-border {
+      transition: fill 300ms $anim-eas;
     }
   }
 
