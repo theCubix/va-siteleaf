@@ -20,9 +20,14 @@
   }
 
   &__wrapper {
+    position: relative;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 530px;
+    }
+
     @include desktop {
-      position: relative;
-      margin: 0 auto;
       max-width: 805px;
     }
   }
