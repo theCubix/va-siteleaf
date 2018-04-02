@@ -3,33 +3,33 @@
   <div class="navigation__wrapper">
 
     <a href="#/" id="appNavMenuButton" class="navigation__link navigation__link--visible navigation__link--menu">
-      <img src="{{ baseUrl }}/uploads/assets/menu-icon.svg" alt="Menu icon" class="navigation__icon">
+      <img src="{{ site.url }}/uploads/assets/menu-icon.svg" alt="Menu icon" class="navigation__icon">
     </a>
 
     <a href="#/" id="appNavMenuCloseButton" class="navigation__link navigation__link--menu">
-      <img src="{{ baseUrl }}/uploads/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
+      <img src="{{ site.url }}/uploads/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
     </a>
 
     <a href="{% if page.url == '/' %}#/{% else %}/{% endif %}" class="navigation__link navigation__link--visible navigation__link--logo">
-      <img src="{{ baseUrl }}/uploads/assets/logo.png" alt="Voltage Arc Icon (minimalistic)" class="navigation__icon">
+      <img src="{{ site.url }}/uploads/assets/logo.png" alt="Voltage Arc Icon (minimalistic)" class="navigation__icon">
     </a>
 
     <a href="#/" id="appNavSearchButton" class="navigation__link navigation__link--visible navigation__link--search">
-      <img src="{{ baseUrl }}/uploads/assets/search-icon.svg" alt="Search icon" class="navigation__icon">
+      <img src="{{ site.url }}/uploads/assets/search-icon.svg" alt="Search icon" class="navigation__icon">
     </a>
 
     <a href="#/" id="appNavSearchCloseButton" class="navigation__link navigation__link--search">
-      <img src="{{ baseUrl }}/uploads/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
+      <img src="{{ site.url }}/uploads/assets/close-icon.svg" alt="Close icon" class="navigation__icon">
     </a>
 
   </div>
 
   <ul id="appNavList" class="navlist">
-    <li class="navlist__item"><a href="{{ baseUrl }}videos/" class="navlist__link">Videos</a></li>
-    <li class="navlist__item"><a href="{{ baseUrl }}music/" class="navlist__link">Music</a></li>
-    <li class="navlist__item"><a href="{{ baseUrl }}gallery/" class="navlist__link">Gallery</a></li>
-    <li class="navlist__item"><a href="{{ baseUrl }}shows/" class="navlist__link">Shows</a></li>
-    <li class="navlist__item"><a href="{{ baseUrl }}news/" class="navlist__link">News</a></li>
+    <li class="navlist__item"><a href="{{ site.url }}videos/" class="navlist__link">Videos</a></li>
+    <li class="navlist__item"><a href="{{ site.url }}music/" class="navlist__link">Music</a></li>
+    <li class="navlist__item"><a href="{{ site.url }}gallery/" class="navlist__link">Gallery</a></li>
+    <li class="navlist__item"><a href="{{ site.url }}shows/" class="navlist__link">Shows</a></li>
+    <li class="navlist__item"><a href="{{ site.url }}news/" class="navlist__link">News</a></li>
   </ul>
 
   <form id="appNavSearch" action="#" class="navsearch">
@@ -37,7 +37,7 @@
         <input class="navsearch__textinput" type="text" name="textsearch" id="searchinput" placeholder="Wonach suchst du?">
     </div>
     <button class="navsearch__button" type="submit">
-      <img class="navsearch__icon" src="{{ baseUrl }}/uploads/assets/search-icon.svg" alt="">
+      <img class="navsearch__icon" src="{{ site.url }}/uploads/assets/search-icon.svg" alt="">
     </button>
   </form>
 
