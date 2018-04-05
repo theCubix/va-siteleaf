@@ -1,0 +1,66 @@
+.fts {
+  &-grid {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    @include desktop {
+      grid-gap: 6rem 16px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  &-hero-image {
+    background-size: cover;
+    border-radius: 3px;
+    grid-column: 1 / span 3;
+    overflow: hidden;
+    padding-top: 62.59%;
+    width: 100%;
+  }
+
+  &-thumb-image {
+    background-size: cover;
+    border-radius: 3px;
+    grid-row: 2;
+    overflow: hidden;
+    padding-top: 100%;
+    width: 100%;
+  }
+
+  &-video {
+    grid-column: 2 / span 3;
+
+    &__heading {
+      margin-bottom: 1em;
+    }
+  
+    &__wrapper {
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+  
+      &--1x1 {
+        padding-top: 100%;
+      }
+  
+      &--16x9 {
+        padding-top: 56.25%;
+      }
+    }
+  
+    &__iframe {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+  
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+}
