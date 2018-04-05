@@ -8,30 +8,45 @@
     @include desktop {
       grid-gap: 6rem 16px;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, auto);
     }
   }
 
   &-hero-image {
-    background-size: cover;
-    border-radius: 3px;
-    grid-column: 1 / span 3;
-    overflow: hidden;
-    padding-top: 62.59%;
-    width: 100%;
+    grid-column: 1 / span 2;
+
+    @include desktop {
+      grid-column: 1 / span 3;
+    }
+
+    &__content {
+      background-position: center;
+      background-size: cover;
+      border-radius: 3px;
+      overflow: hidden;
+      padding-top: 62.59%;
+    }
   }
 
   &-thumb-image {
-    background-size: cover;
-    border-radius: 3px;
-    grid-row: 2;
-    overflow: hidden;
-    padding-top: 100%;
-    width: 100%;
+    @include desktop {
+      grid-row: 2;
+    }
+
+    &__content {
+      background-size: cover;
+      border-radius: 3px;
+      overflow: hidden;
+      padding-top: 100%;
+      width: 100%;
+    }
   }
 
   &-video {
-    grid-column: 2 / span 3;
+    grid-column: 1 / span 2;
+
+    @include desktop{
+      grid-column: 2 / span 3;
+    }
 
     &__heading {
       margin-bottom: 1em;
@@ -40,16 +55,9 @@
     &__wrapper {
       border-radius: 3px;
       overflow: hidden;
+      padding-top: 56.25%;
       position: relative;
       width: 100%;
-  
-      &--1x1 {
-        padding-top: 100%;
-      }
-  
-      &--16x9 {
-        padding-top: 56.25%;
-      }
     }
   
     &__iframe {
