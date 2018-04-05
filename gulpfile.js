@@ -1,19 +1,37 @@
 'use strict';
  
-var gulp = require('gulp'),
-    jshint = require('gulp-jshint'),
-    gutil = require('gulp-util'),
-    sass = require('gulp-sass'),
-    cleanCSS = require('gulp-clean-css'),
-    autoprefixer = require('gulp-autoprefixer'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    babel = require('gulp-babel');
+var gulp = require('gulp');
+var eslint = require('gulp-eslint');
+var gutil = require('gulp-util');
+var sass = require('gulp-sass');
+var cleanCSS = require('gulp-clean-css');
+var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var babel = require('gulp-babel');
 
-gulp.task('jshint', function () {
+gulp.task('jshint', ['build-js'], function () {
   return gulp.src('sources/js/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
+    .pipe(eslint({
+      'env': {
+        'es6': true
+      },
+      'extends': 'eslint:recommended',
+      'rules': {
+        'indent': ['error', 4],
+        'linebreak-style': ['error', 'unix'],
+        'quotes': ['error', 'double'],
+        'semi': ['error', 'always'],
+
+        // override default options for rules from base configurations
+        'comma-dangle': ['error', 'always'],
+        'no-cond-assign': ['error', 'always'],
+
+        // disable rules from base configurations
+        'no-console': 'off',
+      }
+    }))
+    .pipe(eslint.format());
 });
 
 gulp.task('build-css', function () {
@@ -32,15 +50,15 @@ gulp.task('build-css', function () {
 gulp.task('build-js', function () {
   return gulp.src('sources/js/**/*.js')
     .pipe(babel({
-      presets: ['env']
+      presets: ["env"]
     }))
     .pipe(concat('bundle.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js'));
-})
+});
 
 gulp.task('watch', function () {
-  gulp.watch('sources/js/**/*.js', ['jshint', 'build-js'])
+  gulp.watch('sources/js/**/*.js', ['build-js', 'jshint']);
   gulp.watch('sources/sass/**/*.scss', ['build-css']);
 });
 
