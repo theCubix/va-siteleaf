@@ -2,6 +2,9 @@
 title: Example Page
 timezone: Europe/Berlin
 collections:
+  frontpage:
+    title: Frontpage
+    output: true
   posts:
     title: Posts
     output: true
