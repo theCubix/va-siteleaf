@@ -13,7 +13,7 @@ var babel = require('gulp-babel');
 gulp.task('jshint', ['build-js'], function () {
   return gulp.src('sources/js/**/*.js')
     .pipe(eslint({
-      'env': {
+      'envs': {
         'es6': true
       },
       'extends': 'eslint:recommended',
