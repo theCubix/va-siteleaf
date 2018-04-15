@@ -21,6 +21,7 @@ defaults:
     ticket-url: ''
     street: ''
     city: ''
+    canton: ''
     zip: ''
     venue-name: ''
 email: info@voltagearc.com
