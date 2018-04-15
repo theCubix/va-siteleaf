@@ -21,6 +21,6 @@ MIOL Photo List:
   Timon:
     Function: Drums
     Photo: "/uploads/band/timon.jpg"
-MIOL Record Video ID: 0sFvFVkeGVg
+MIOL Record Video ID: Zw4ZssHgd1w
 ---
 
