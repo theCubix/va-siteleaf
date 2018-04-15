@@ -7,6 +7,7 @@ var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var eslint = require('gulp-eslint');
+var cleanCSS = require('gulp-clean-css');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -50,6 +51,9 @@ gulp.task('sass', function () {
       onError: browserSync.notify
     }))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+    .pipe(cleanCSS({
+      compatibility: 'ie8'
+    }))
     .pipe(gulp.dest('_site/css'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest('css'));
