@@ -19,7 +19,11 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#d91b1b">
 </head>
+{% if page.url == '/' %}
+<body class="index">
+{% else %}
 <body>
+{% endif %}
 <main>
   {% include navigation.html %}
 
