@@ -1,0 +1,102 @@
+---
+layout: base
+---
+
+<section class="section section--avoid-nav">
+  <div class="container">
+
+    <h1 class="section__title">
+      {{ page.title }}
+    </h1>
+
+    <h2 class="section__subtitle section__subtitle--compact">
+      Bevorstehend
+    </h2>
+    <div class="shows-grid">
+      {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
+      {% assign sortedShows = site.shows | sort: 'start-date' %}
+      {% for show in sortedShows %}
+        {% capture date %}{{show.start-date | date: '%s' | plus: 0 }}{% endcapture %}
+        {% if date > now %}
+        <div class="show show--upcoming">
+          <div class="show__body">
+            <h3 class="show__text show__title">{{ show.title }}</h3>
+            <h4 class="show__text show__venue">{{ show.venue-name }}&nbsp;&ndash;&nbsp;<span class="show__text show__location">{{ show.street }}&nbsp;{{ show.zip }}&nbsp;{{ show.city }}</span></h4>
+            <h4 class="show__text show__date">
+              {% assign m = show.doors-date | date: "%-m" %}
+              {{ show.doors-date | date: "%-d" }}
+              {% case m %}
+                {% when '1' %}Januar
+                {% when '2' %}Februar
+                {% when '3' %}M&auml;rz
+                {% when '4' %}April
+                {% when '5' %}Mai
+                {% when '6' %}Juni
+                {% when '7' %}Juli
+                {% when '8' %}August
+                {% when '9' %}September
+                {% when '10' %}Oktober
+                {% when '11' %}November
+                {% when '12' %}Dezember
+              {% endcase %}
+              {{ show.doors-date | date: "%Y" }}, {{ show.doors-date | date: "%R" }}
+            </h4>
+          </div>
+          <div class="show__footer show__footer--upcoming">
+            {% if show.ticket-url != '' %}
+              <a href="{{ show.ticket-url }}" class="show__link show__link--upcoming">Tickets</a>
+            {% else %}
+              <span class="show__link-placeholder">Abendverkauf</span>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <h2 class="section__subtitle">
+      Vergangen
+    </h2>
+    <div class="shows-grid">
+      {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
+      {% assign sortedShows = site.shows | sort: 'start-date' %}
+      {% for show in sortedShows %}
+        {% capture date %}{{show.start-date | date: '%s' | plus: 0 }}{% endcapture %}
+        {% if date < now %}
+        <div class="show show--former">
+          <div class="show__body">
+            <h3 class="show__text show__title">{{ show.title }}</h3>
+            <h4 class="show__text show__venue">{{ show.venue-name }}&nbsp;&ndash;&nbsp;<span class="show__text show__location">{{ show.street }}&nbsp;{{ show.zip }}&nbsp;{{ show.city }}</span></h4>
+            <h4 class="show__text show__date">
+              {% assign m = show.doors-date | date: "%-m" %}
+              {{ show.doors-date | date: "%-d" }}
+              {% case m %}
+                {% when '1' %}Januar
+                {% when '2' %}Februar
+                {% when '3' %}M&auml;rz
+                {% when '4' %}April
+                {% when '5' %}Mai
+                {% when '6' %}Juni
+                {% when '7' %}Juli
+                {% when '8' %}August
+                {% when '9' %}September
+                {% when '10' %}Oktober
+                {% when '11' %}November
+                {% when '12' %}Dezember
+              {% endcase %}
+              {{ show.doors-date | date: "%Y" }}, {{ show.doors-date | date: "%R" }}
+            </h4>
+          </div>
+          <div class="show__footer show__footer--former">
+            {% if show.ticket-url != '' %}
+              <a href="{{ show.ticket-url }}" class="show__link show__link--former">Tickets</a>
+            {% else %}
+              <span class="show__link-placeholder">Abendverkauf</span>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
