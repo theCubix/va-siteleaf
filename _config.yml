@@ -20,3 +20,12 @@ github_username: jekyll
 markdown: kramdown
 exclude:
 - resources
+defaults:
+  -
+    scope:
+      path: ""
+      type: "Shows"
+    values:
+      start-date: ""
+      doors-date: ""
+      ticket-url: ""
