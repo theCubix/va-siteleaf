@@ -11,6 +11,10 @@
     margin-top: 15em;
   }
 
+  &--avoid-nav {
+    margin-top: 7.5em;
+  }
+
   &__title {
     display: inline-block;
     font-size: 2em;
@@ -34,6 +38,15 @@
       position: relative;
       width: 100%;
       z-index: -1;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.75em;
+    margin: 2.5em 0 1em 0;
+
+    &--compact {
+      margin-top: 0;
     }
   }
 
