@@ -42,7 +42,9 @@
   }
 
   &__text {
-    line-height: 1.618em;
+    &>p {
+      line-height: 1.618em;
+    }
 
     &--regular-line-height {
       line-height: 1.2em;
