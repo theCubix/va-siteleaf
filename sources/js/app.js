@@ -60,17 +60,6 @@ function showLinks() {
   }, 100);
 };
 
-/* let showLinks = () => {
-  setTimeout( _ => {
-    let link = navListLinks[showLinksI];
-    link.classList.add('navlist__item--visible');
-    showLinks++;
-    if (showLinksI < navListLinks.length) {
-      showLinks();
-    }
-  }, 100);
-}; */
-
 // hide the navlist
 let hideNavList = () => {
   
@@ -153,24 +142,29 @@ let hideSearch = () => {
   navSearchClose.classList.remove('navigation__link--visible');
 };
 
-//automatically add background to nav on scroll
-window.addEventListener('scroll', (e) => {
-  scroll.call()
-});
+(() => {
+  let body = document.getElementsByTagName('body');
+  if (body[0].classList.contains('index')) {
 
-//create 'scroll' function
-let scroll = () => {
-  let scrollPosition = window.scrollY;
+    //automatically add background to nav on scroll
+    window.addEventListener('scroll', (e) => {
+       scroll.call()
+    });
 
-  //fire 'showNav' function
-  let bgImageHeight = bgImage.offsetHeight;
-
-  if (scrollPosition >= bgImageHeight) {
-    nav.classList.add('navigation--bg-visible');
+    let scroll = () => {
+      let scrollPosition = window.scrollY;
+      let bgImageHeight = bgImage.offsetHeight;
+  
+      if (scrollPosition >= bgImageHeight) {
+        nav.classList.add('navigation--bg-visible');
+      } else {
+        nav.classList.remove('navigation--bg-visible');
+      }
+    };
   } else {
-    nav.classList.remove('navigation--bg-visible');
-  }
-};
+    nav.classList.add('navigation--bg-visible');
+  };
+}) ()
 
 document.addEventListener('scroll', (e) => {
 	//save the amount of pixels scrolled to the pageTop variable
