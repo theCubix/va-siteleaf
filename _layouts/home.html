@@ -268,17 +268,17 @@ layout: base
     <h2 class="section__title fadein__content fadein__content--inactive fadein__text">
       Bevorstehende Shows
     </h2>
-    <div class="fp-shows-grid">
+    <div class="shows-grid">
       {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
       {% assign sortedShows = site.shows | sort: 'start-date' %}
       {% for show in sortedShows %}
         {% capture date %}{{show.start-date | date: '%s' | plus: 0 }}{% endcapture %}
         {% if date > now %}
-        <div class="fp-show fadein__content fadein__content--inactive fadein__text">
-          <div class="fp-show__body">
-            <h3 class="fp-show__text fp-show__title">{{ show.title }}</h3>
-            <h4 class="fp-show__text fp-show__venue">{{ show.venue-name }}&nbsp;&ndash;&nbsp;<span class="fp-show__text fp-show__location">{{ show.street }}&nbsp;{{ show.zip }}&nbsp;{{ show.city }}</span></h4>
-            <h4 class="fp-show__text fp-show__date">
+        <div class="show show--upcoming fadein__content fadein__content--inactive fadein__text">
+          <div class="show__body">
+            <h3 class="show__text show__title">{{ show.title }}</h3>
+            <h4 class="show__text show__venue">{{ show.venue-name }}&nbsp;&ndash;&nbsp;<span class="show__text fp-show__location">{{ show.street }}&nbsp;{{ show.zip }}&nbsp;{{ show.city }}</span></h4>
+            <h4 class="show__text show__date">
               {% assign m = show.doors-date | date: "%-m" %}
               {{ show.doors-date | date: "%-d" }}
               {% case m %}
@@ -298,11 +298,11 @@ layout: base
               {{ show.doors-date | date: "%Y" }}, {{ show.doors-date | date: "%R" }}
             </h4>
           </div>
-          <div class="fp-show__footer">
+          <div class="show__footer show__footer--upcoming">
             {% if show.ticket-url != '' %}
-              <a href="{{ show.ticket-url }}" class="fp-show__link">Tickets</a>
+              <a href="{{ show.ticket-url }}" class="show__link show__link--upcoming">Tickets</a>
             {% else %}
-              <span class="fp-show__link-placeholder">Abendverkauf</span>
+              <span class="show__link-placeholder">Abendverkauf</span>
             {% endif %}
           </div>
         </div>
