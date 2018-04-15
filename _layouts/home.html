@@ -277,7 +277,7 @@ layout: base
         <div class="show show--upcoming fadein__content fadein__content--inactive fadein__text">
           <div class="show__body">
             <h3 class="show__text show__title">{{ show.title }}</h3>
-            <h4 class="show__text show__venue">{{ show.venue-name }}&nbsp;&ndash;&nbsp;<span class="show__text fp-show__location">{{ show.street }}&nbsp;{{ show.zip }}&nbsp;{{ show.city }}</span></h4>
+            <h4 class="show__text show__venue">{{ show.venue-name }}&nbsp;&ndash;&nbsp;<span class="show__text show__location">{{ show.street }}&nbsp;{{ show.zip }}&nbsp;{{ show.city }}</span></h4>
             <h4 class="show__text show__date">
               {% assign m = show.doors-date | date: "%-m" %}
               {{ show.doors-date | date: "%-d" }}
