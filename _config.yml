@@ -24,7 +24,7 @@ defaults:
   -
     scope:
       path: ""
-      type: "Shows"
+      type: "shows"
     values:
       start-date: ""
       doors-date: ""
