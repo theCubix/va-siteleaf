@@ -271,7 +271,7 @@ layout: base
     <div class="fp-shows-grid">
       {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
       {% assign sortedShows = site.shows | sort: 'start-date' %}
-      {% for show in site.shows %}
+      {% for show in sortedShows %}
         {% capture date %}{{show.start-date | date: '%s' | plus: 0 }}{% endcapture %}
         {% if date > now %}
         <div class="fp-show fadein__content fadein__content--inactive fadein__text">
