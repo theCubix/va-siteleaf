@@ -22,7 +22,7 @@
   }
 
   &__footer {
-    padding: 16px 32px;
+    padding: 9px 18px;
     background-color: $red-d1;
   }
 
@@ -45,5 +45,22 @@
     font-size: 1.1em;
     margin: 0;
     opacity: 0.84;
+  }
+
+  &__link {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 7px 14px;
+    text-decoration: none;
+    transition: background-color 300ms ease;
+
+    &:hover {
+      background-color: $red-d2;
+    }
+  }
+
+  &__link-placeholder {
+    display: inline-block;
+    padding: 7px 14px;
   }
 }
