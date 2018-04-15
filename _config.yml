@@ -11,6 +11,14 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: Shows
+  values:
+    start-date: ''
+    doors-date: ''
+    ticket-url: ''
 email: info@voltagearc.com
 description: This is an example page.
 baseurl: "/"
@@ -20,12 +28,3 @@ github_username: jekyll
 markdown: kramdown
 exclude:
 - resources
-defaults:
-  -
-    scope:
-      path: ""
-      type: "Shows"
-    values:
-      start-date: ""
-      doors-date: ""
-      ticket-url: ""
