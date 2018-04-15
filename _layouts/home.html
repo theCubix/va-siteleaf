@@ -16,12 +16,20 @@ layout: base
 
 </section>
 
+<div>
+  {% for page in site.frontpage %}
+  {% if page.title == "Feels Like Home" %}
+  {{ page.title }}
+  {% endif %}
+  {% endfor %}
+</div>
+
 <section class="section section--margin">
   <div class="container miol">
     <h2 class="section__title nomargin fadein__content fadein__content--inactive fadein__text">
       Music Is Our Life
     </h2>
-    
+
     <div class="miol-grid">
       <div class="miol-video fadein__content fadein__content--inactive fadein__video">
         <div class="miol-video__wrapper miol-video__wrapper--1x1">
