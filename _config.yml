@@ -4,7 +4,7 @@ timezone: Europe/Berlin
 collections:
   frontpage:
     title: Frontpage
-    output: true
+    output: false
   posts:
     title: Posts
     output: true
@@ -19,4 +19,4 @@ twitter_username: jekyllrb
 github_username: jekyll
 markdown: kramdown
 exclude:
-- sass
+- resources
