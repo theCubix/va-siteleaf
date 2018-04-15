@@ -1,0 +1,49 @@
+.fp-shows {
+  &-grid {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.fp-show {
+  background-color: $red-pr;
+  border-radius: 3px;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+  &__body {
+    padding: 32px;
+  }
+
+  &__footer {
+    padding: 16px 32px;
+    background-color: $red-d1;
+  }
+
+  &__text {
+    text-transform: none;
+  }
+
+  &__title {
+    font-size: 1.4em;
+    margin: 0 0 0.5em;
+  }
+
+  &__venue {
+    font-size: 1.1em;
+    margin: 0 0 0.4em;
+    opacity: 0.84;
+  }
+
+  &__date {
+    font-size: 1.1em;
+    margin: 0;
+    opacity: 0.84;
+  }
+}
