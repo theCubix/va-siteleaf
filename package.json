@@ -1,4 +1,5 @@
 {
+  "version": "0.1",
   "name": "voltage-arc",
   "description": "The New Voltage Arc Website",
   "license": "MIT",
@@ -8,6 +9,7 @@
     "es6": true
   },
   "dependencies": {
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
