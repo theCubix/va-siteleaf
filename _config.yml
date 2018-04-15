@@ -19,6 +19,10 @@ defaults:
     start-date: ''
     doors-date: ''
     ticket-url: ''
+    street: ''
+    city: ''
+    zip: ''
+    venue-name: ''
 email: info@voltagearc.com
 description: This is an example page.
 baseurl: "/"
