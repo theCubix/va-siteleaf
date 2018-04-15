@@ -262,3 +262,52 @@ layout: base
     </div>
   </div>
 </section>
+
+<section class="section section--margin">
+  <div class="container">
+    <h2 class="section__title fadein__content fadein__content--inactive fadein__text">
+      Bevorstehende Shows
+    </h2>
+    <div class="fp-shows-grid">
+      {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
+      {% assign sortedShows = site.shows | sort: 'start-date' %}
+      {% for show in site.shows %}
+        {% capture date %}{{show.start-date | date: '%s' | plus: 0 }}{% endcapture %}
+        {% if date > now %}
+        <div class="fp-show fadein__content fadein__content--inactive fadein__text">
+          <div class="fp-show__body">
+            <h3 class="fp-show__text fp-show__title">{{ show.title }}</h3>
+            <h4 class="fp-show__text fp-show__venue">{{ show.venue-name }}&nbsp;&ndash;&nbsp;<span class="fp-show__text fp-show__location">{{ show.street }}&nbsp;{{ show.zip }}&nbsp;{{ show.city }}</span></h4>
+            <h4 class="fp-show__text fp-show__date">
+              {% assign m = show.doors-date | date: "%-m" %}
+              {{ show.doors-date | date: "%-d" }}
+              {% case m %}
+                {% when '1' %}Januar
+                {% when '2' %}Februar
+                {% when '3' %}M&auml;rz
+                {% when '4' %}April
+                {% when '5' %}Mai
+                {% when '6' %}Juni
+                {% when '7' %}Juli
+                {% when '8' %}August
+                {% when '9' %}September
+                {% when '10' %}Oktober
+                {% when '11' %}November
+                {% when '12' %}Dezember
+              {% endcase %}
+              {{ show.doors-date | date: "%Y" }}, {{ show.doors-date | date: "%R" }}
+            </h4>
+          </div>
+          <div class="fp-show__footer">
+            {% if show.ticket-url != '' %}
+              <a href="{{ show.ticket-url }}" class="fp-show__link">Tickets</a>
+            {% else %}
+              <span class="fp-show__link-placeholder">Abendverkauf</span>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
