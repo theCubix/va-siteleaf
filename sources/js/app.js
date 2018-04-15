@@ -1,6 +1,5 @@
 // declare variables
 // everything window
-let scrollPosition = 0;
 let screenWidth = 0;
 
 // nav general
@@ -155,27 +154,22 @@ let hideSearch = () => {
 };
 
 //automatically add background to nav on scroll
-window.addEventListener('scroll', (e) => scroll.call());
+window.addEventListener('scroll', (e) => {
+  scroll.call()
+});
 
 //create 'scroll' function
 let scroll = () => {
-  scrollPosition = window.scrollY;
+  let scrollPosition = window.scrollY;
 
   //fire 'showNav' function
-  showNav.call(scrollPosition);
-};
-
-//create 'showNav' function
-let showNav = (scrollPosition) => {
   let bgImageHeight = bgImage.offsetHeight;
 
   if (scrollPosition >= bgImageHeight) {
-    //if the scroll position is less than 200px, don't show the background
     nav.classList.add('navigation--bg-visible');
   } else {
-    //otherwise show
     nav.classList.remove('navigation--bg-visible');
-  };
+  }
 };
 
 document.addEventListener('scroll', (e) => {

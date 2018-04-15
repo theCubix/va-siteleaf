@@ -373,6 +373,7 @@ button {
 .fts-thumb-image__content {
   -webkit-background-size: cover;
           background-size: cover;
+  background-position: center;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   overflow: hidden;
