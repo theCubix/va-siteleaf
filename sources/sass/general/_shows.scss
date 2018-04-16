@@ -25,11 +25,19 @@
   }
   
   &__body {
-    padding: 32px 32px 24px 32px;
+    padding: 24px 24px 16px 24px;
+
+    @include desktop {
+      padding: 32px 32px 24px 32px;
+    }
   }
 
   &__footer {
-    padding: 9px 18px;
+    padding: 9px 10px;
+
+    @include desktop {
+      padding: 9px 18px;
+    }
 
     &--upcoming {
       background-color: $red-d1;
