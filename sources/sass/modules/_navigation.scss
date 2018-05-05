@@ -14,7 +14,7 @@
     background-color: rgba($dark-pr, 0.9);
   }
 
-  &--elapsed {
+  &--expanded {
     background-color: rgba($dark-pr, 1);
     height: 100%;
   }
@@ -118,7 +118,7 @@
     position: absolute;
   }
 
-  &--elapsed {
+  &--expanded {
     @include phone {
       opacity: 1;
       visibility: visible;
@@ -196,7 +196,7 @@
     width: 500px;
   }
 
-  &--elapsed {
+  &--expanded {
     opacity: 1;
     visibility: visible;
   }
