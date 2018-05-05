@@ -63,7 +63,7 @@ gulp.task('sass', function () {
  * Compile files from sources/js into both _site/js (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('js', function () {
-  return gulp.src('sources/js/**/*.js')
+  return gulp.src('sources/js/nav.js', 'sources/js/reveal.js')
   .pipe(eslint({
     'envs': [
       { 'es6': true }
