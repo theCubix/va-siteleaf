@@ -63,7 +63,7 @@ gulp.task('sass', function () {
  * Compile files from sources/js into both _site/js (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('js', function () {
-  return gulp.src('sources/js/nav.js', 'sources/js/reveal.js')
+  return gulp.src('sources/js/app.js')
   .pipe(eslint({
     'envs': [
       { 'es6': true }
@@ -101,7 +101,7 @@ gulp.task('js', function () {
 gulp.task('watch', function () {
   gulp.watch('sources/sass/**/*.scss', ['sass']);
   gulp.watch('sources/js/**/*.js', ['js']);
-  gulp.watch(['*.html', '*.md', '_layouts/*.html', '_posts/*', '_includes'], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '*.md', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
 });
 
 /**
