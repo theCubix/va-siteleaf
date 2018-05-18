@@ -65,13 +65,16 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
   return gulp.src('sources/js/app.js')
   .pipe(eslint({
-    'envs': [
-      { 'es6': true }
+    envs: [
+      {
+        'browser': true,
+        'es6': true
+      }
     ],
-    'extends': 'eslint:recommended',
-    'rules': {
+    extends: 'eslint:recommended',
+    rules: {
       'indent': ['error', 4],
-      'linebreak-style': ['error', 'unix'],
+      'linebreakStyle': ['error', 'unix'],
       'quotes': ['error', 'double'],
       'semi': ['error', 'always'],
 
