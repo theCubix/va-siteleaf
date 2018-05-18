@@ -1,17 +1,23 @@
+/*
+ ------------------
+ Show / Hide Nav and Search
+ ------------------
+*/
+
 // nav general
-let nav = document.getElementById('appNavigation');
-let navList = document.getElementById('appNavList');
-let navSearchForm = document.getElementById('appNavSearch');
+var nav = document.getElementById('appNavigation');
+var navList = document.getElementById('appNavList');
+var navSearchForm = document.getElementById('appNavSearch');
 
 // nav menu
-let navMenu = document.getElementById('appNavMenuButton');
-let navMenuClose = document.getElementById('appNavMenuCloseButton');
-let showLinksI = 0;
-let navListLinks = navList.querySelectorAll('li');
+var navMenu = document.getElementById('appNavMenuButton');
+var navMenuClose = document.getElementById('appNavMenuCloseButton');
+var showLinksI = 0;
+var navListLinks = navList.querySelectorAll('li');
 
 // nav search
-let navSearch = document.getElementById('appNavSearchButton');
-let navSearchClose = document.getElementById('appNavSearchCloseButton');
+var navSearch = document.getElementById('appNavSearchButton');
+var navSearchClose = document.getElementById('appNavSearchCloseButton');
 
 // navlist control
 navMenu.addEventListener('click', (e) => showNavList.call());
@@ -19,7 +25,7 @@ navMenu.addEventListener('click', (e) => showNavList.call());
 navMenuClose.addEventListener( 'click', (e) => hideNavList.call());
 
 // show the navlist
-let showNavList = () => {
+var showNavList = () => {
 
   // disable body scrolling
   document.getElementsByTagName('body')[0].classList.add('lock-scroll');
@@ -46,7 +52,7 @@ let showNavList = () => {
 //automated and delayed animation
 function showLinks() {
   setTimeout(function () {
-    let link = navListLinks[showLinksI];
+    var link = navListLinks[showLinksI];
     link.classList.add('navlist__item--visible');
     showLinksI++;
     if (showLinksI < navListLinks.length) {
@@ -56,7 +62,7 @@ function showLinks() {
 };
 
 // hide the navlist
-let hideNavList = () => {
+var hideNavList = () => {
   
   // collapse the navigation
   nav.classList.remove('navigation--expanded');
@@ -74,8 +80,8 @@ let hideNavList = () => {
   navSearch.classList.add('navigation__link--visible');
   
   // hide each link
-  for (let index = 0; index < navListLinks.length; index++) {
-    let link = navListLinks[index];
+  for (var index = 0; index < navListLinks.length; index++) {
+    var link = navListLinks[index];
     link.classList.remove('navlist__item--visible');
   }
 
@@ -93,7 +99,7 @@ navSearch.addEventListener('click', (e) => showSearch.call());
 navSearchClose.addEventListener('click', (e) => hideSearch.call());
 
 //show the search
-let showSearch = () => {
+var showSearch = () => {
   // disable scrolling
   document.getElementsByTagName('body')[0].classList.add('lock-scroll');
 
@@ -117,7 +123,7 @@ let showSearch = () => {
 };
 
 //hide the search
-let hideSearch = () => {
+var hideSearch = () => {
   // enable scrolling
   document.getElementsByTagName('body')[0].classList.remove('lock-scroll');
 
@@ -138,7 +144,7 @@ let hideSearch = () => {
 };
 
 (() => {
-  let body = document.getElementsByTagName('body');
+  var body = document.getElementsByTagName('body');
   if (body[0].classList.contains('index')) {
 
     //automatically add background to nav on scroll
@@ -146,10 +152,10 @@ let hideSearch = () => {
        scroll.call()
     });
 
-    let scroll = () => {
-      let bgImage = document.getElementById('appLandingPageBackgroundImage');
-      let bgImageHeight = bgImage.offsetHeight;
-      let scrollPosition = window.scrollY;
+    var scroll = () => {
+      var bgImage = document.getElementById('appLandingPageBackgroundImage');
+      var bgImageHeight = bgImage.offsetHeight;
+      var scrollPosition = window.scrollY;
   
       if (scrollPosition >= bgImageHeight) {
         nav.classList.add('navigation--bg-visible');
@@ -161,6 +167,12 @@ let hideSearch = () => {
     nav.classList.add('navigation--bg-visible');
   };
 }) ()
+
+/*
+ ------------------
+ Fadein on scroll
+ ------------------
+*/
 
 document.addEventListener('scroll', (e) => {
 	//save the amount of pixels scrolled to the pageTop variable
