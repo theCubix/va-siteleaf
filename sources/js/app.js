@@ -7,7 +7,6 @@
 // nav general
 var nav = document.getElementById('appNavigation');
 var navList = document.getElementById('appNavList');
-var navSearchForm = document.getElementById('appNavSearch');
 
 // nav menu
 var navMenu = document.getElementById('appNavMenuButton');
@@ -15,9 +14,6 @@ var navMenuClose = document.getElementById('appNavMenuCloseButton');
 var showLinksI = 0;
 var navListLinks = navList.querySelectorAll('li');
 
-// nav search
-var navSearch = document.getElementById('appNavSearchButton');
-var navSearchClose = document.getElementById('appNavSearchCloseButton');
 
 // navlist control
 navMenu.addEventListener('click', (e) => showNavList.call());
@@ -38,9 +34,6 @@ var showNavList = () => {
   
   // hide the menu button
   navMenu.classList.remove('navigation__link--visible');
-  
-  // hide the search button
-  navSearch.classList.remove('navigation__link--visible');
   
   // show the close button
   navMenuClose.classList.add('navigation__link--visible');
@@ -76,9 +69,6 @@ var hideNavList = () => {
   // show the menu button
   navMenu.classList.add('navigation__link--visible');
   
-  // show the search button
-  navSearch.classList.add('navigation__link--visible');
-  
   // hide each link
   for (var index = 0; index < navListLinks.length; index++) {
     var link = navListLinks[index];
@@ -90,57 +80,6 @@ var hideNavList = () => {
 
   // set showLinksI to 0
   showLinksI = 0;
-};
-
-// show the search
-navSearch.addEventListener('click', (e) => showSearch.call());
-
-// hide the search
-navSearchClose.addEventListener('click', (e) => hideSearch.call());
-
-//show the search
-var showSearch = () => {
-  // disable scrolling
-  document.getElementsByTagName('body')[0].classList.add('lock-scroll');
-
-  // 'expand' the navigation bar to meet fullscreen height
-  nav.classList.add('navigation--expanded');
-
-  // hide the search button
-  navSearch.classList.remove('navigation__link--visible');
-
-  // hide the menu button
-  navMenu.classList.remove('navigation__link--visible');
-
-  // show the close button
-  navSearchClose.classList.add('navigation__link--visible');
-
-  // wait 500 ms, the show the search form
-  setTimeout(() => {
-    navSearchForm.classList.add('navsearch--expanded');
-  }, 
-    500);
-};
-
-//hide the search
-var hideSearch = () => {
-  // enable scrolling
-  document.getElementsByTagName('body')[0].classList.remove('lock-scroll');
-
-  // hide the search form
-  navSearchForm.classList.remove('navsearch--expanded');
-
-  // collapse the navbar
-  nav.classList.remove('navigation--expanded');
-
-  // show the search button
-  navSearch.classList.add('navigation__link--visible');
-
-  // show the menu button
-  navMenu.classList.add('navigation__link--visible');
-
-  // hide the close button
-  navSearchClose.classList.remove('navigation__link--visible');
 };
 
 (() => {
@@ -156,7 +95,7 @@ var hideSearch = () => {
       var bgImage = document.getElementById('appLandingPageBackgroundImage');
       var bgImageHeight = bgImage.offsetHeight;
       var scrollPosition = window.scrollY;
-  
+
       if (scrollPosition >= bgImageHeight) {
         nav.classList.add('navigation--bg-visible');
       } else {
@@ -166,7 +105,7 @@ var hideSearch = () => {
   } else {
     nav.classList.add('navigation--bg-visible');
   };
-}) ()
+}) ();
 
 /*
  ------------------
