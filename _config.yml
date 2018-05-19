@@ -54,3 +54,4 @@ github_username: jekyll
 markdown: kramdown
 exclude:
 - resources
+- node_modules
