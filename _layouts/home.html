@@ -235,7 +235,7 @@ layout: base
 
       <div class="fts-video fadein__content fadein__content--inactive fadein__video">
         <h3 class="nomargin fts-video__heading">On Record:</h3>
-        <div class="fts-video__wrapper">
+        <!--<div class="fts-video__wrapper">
             <iframe
               class="fts-video__iframe"
               width="560" height="315"
@@ -243,8 +243,18 @@ layout: base
               frameborder="0" allow="autoplay; encrypted-media"
               allowfullscreen>
             </iframe>
+        </div>-->
+        <div
+          class="vp-video"
+          data-src="https://www.youtube.com/embed/ugc7OuK8P4Y?rel=0&amp;showinfo=0"
+          style="background-image: url('https://img.youtube.com/vi/ugc7OuK8P4Y/maxresdefault.jpg')"
+        >
+          <div class="vp-video__overlay">
+            <h2 class="vp-video__title">Fuck The System</h2>
+          </div>
+            <img src="{{ site.url }}/uploads/assets/play-icon.svg" alt="Playback Icon" class="vp-video__icon">
+          </div>
         </div>
-      </div>
 
   </div>
 </section>
