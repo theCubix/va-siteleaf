@@ -142,3 +142,19 @@ document.addEventListener('scroll', (e) => {
     };
   };
 });
+
+var videos = document.querySelectorAll('.vp-video');
+[].forEach.call(videos, function(video) {
+  video.addEventListener('click', function(e) {
+    
+    // create the iframe tag
+    var iframe = document.createElement( "iframe" );
+
+    iframe.setAttribute( "frameborder", "0" );
+    iframe.setAttribute( "allowfullscreen", "" );
+    iframe.setAttribute( "class", "vp-video__iframe" )
+    iframe.setAttribute( "src", video.dataset.src );
+
+    video.appendChild( iframe );
+  });
+});
