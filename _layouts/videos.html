@@ -11,7 +11,15 @@ layout: base
     </h1>
 
     {% for video in site.videos %}
-    <p>{{ video.id }}</p>
+
+      <div
+        class="vp-video"
+        data-src="{{ video.embed-base }}{{ video.yt-id }}{{ video.embed-options }}"
+        style="background-image: url('{{ video.thumbnail-base }}{{ video.yt-id }}{{ video.thumbnail-quality }}')"
+      >
+        <img src="{{ site.url }}/uploads/assets/play-icon.svg" alt="Playback Icon" class="vp-video__icon">
+      </div>
+
     {% endfor %}
 
   </div>
