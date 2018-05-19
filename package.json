@@ -20,6 +20,7 @@
     "gulp-sass": "^3.2.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
+    "lightense-images": "^1.0.5",
     "smartphoto": "^1.2.5"
   }
 }
