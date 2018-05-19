@@ -16,12 +16,47 @@
 .pp-image {
   position: relative;
 
-  &__caption {
-    position: absolute;
-    bottom: 0;
-    
+  &__file {
+    border-radius: 2px;
+    display: block;
   }
 
-  &__file {
+  @include desktop {
+    &:hover>.pp-image__caption {
+      opacity: 1;
+    }
+  }
+
+  &__caption {
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $dark-l1;
+    border-radius: 0 0 2px 2px;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    position: absolute;
+    transition: opacity 300ms ease;
+    width: 100%;
+
+    @include desktop {
+      opacity: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    text-decoration: none;
+
+    &>span {
+      font-size: 1em;
+      line-height: 24px;
+      opacity: 0.8;
+    }
+  }
+
+  &__icon {
+    margin-left: auto;
   }
 }
