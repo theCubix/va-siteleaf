@@ -1,0 +1,35 @@
+.vp-video {
+  background-size: cover;
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+
+  &__icon {
+    top: 50%;
+    left: 50%;
+  
+    cursor: pointer;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    opacity: 0.8;
+    position: absolute;
+    transition: opacity 300ms ease;
+    width: 100px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__iframe {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
