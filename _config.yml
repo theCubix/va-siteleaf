@@ -44,6 +44,7 @@ defaults:
     type: photos
   values:
     file: ''
+    ig-url: ''
 email: info@voltagearc.com
 description: This is an example page.
 baseurl: "/"
