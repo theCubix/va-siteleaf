@@ -31,7 +31,7 @@ defaults:
     path: ''
     type: videos
   values:
-    id: ''
+    yt-id: ''
     thumbnail-base: https://img.youtube.com/vi/
     thumbnail-quality: "/maxresdefault.jpg"
     embed-base: https://www.youtube.com/embed/
