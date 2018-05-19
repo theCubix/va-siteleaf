@@ -13,7 +13,7 @@ collections:
     output: true
   videos:
     title: Videos
-    output: true
+    output: false
 defaults:
 - scope:
     path: ''
