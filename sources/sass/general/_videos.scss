@@ -1,9 +1,15 @@
 .vp-video {
   background-size: cover;
+  background-position: center;
+  border-radius: 3px;
   margin-bottom: 16px;
   padding-top: 56.25%;
   position: relative;
   width: 100%;
+
+  &--1x1 {
+    padding-top: 100%!important;
+  }
 
   &__overlay {
     top: 0;
