@@ -143,6 +143,12 @@ document.addEventListener('scroll', (e) => {
   };
 });
 
+/*
+ ------------------
+ Lazy load Youtube embeds
+ ------------------
+*/
+
 var videos = document.querySelectorAll('.vp-video');
 [].forEach.call(videos, function(video) {
   video.addEventListener('click', function(e) {
@@ -158,3 +164,22 @@ var videos = document.querySelectorAll('.vp-video');
     video.appendChild( iframe );
   });
 });
+
+(() => {
+  var body = document.getElementsByTagName('body');
+  if (body[0].classList.contains('gallery')) {
+/*
+ ------------------
+ Fire Lightense Images
+ ------------------
+*/
+
+  window.addEventListener('load', function () {
+    Lightense('img', {
+      time: 300,
+      offset: 40,
+      background: 'rgba(0, 0, 0, 0.8)'
+    });
+  }, false);
+  };
+}) (); // close if statement, that determines if on gallery page
