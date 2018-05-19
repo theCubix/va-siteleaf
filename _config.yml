@@ -39,6 +39,11 @@ defaults:
     thumbnail-quality: "/maxresdefault.jpg"
     embed-base: https://www.youtube.com/embed/
     embed-options: "?autoplay=1"
+- scope:
+    path: ''
+    type: photos
+  values:
+    file: ''
 email: info@voltagearc.com
 description: This is an example page.
 baseurl: "/"
