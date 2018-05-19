@@ -1,0 +1,28 @@
+---
+layout: base
+---
+
+<section class="section section--avoid-nav">
+  <div class="container">
+
+    <h1 class="section__title">
+      {{ page.title }}
+    </h1>
+
+    <div class="pp-grid">
+      {% assign sorted_photos = site.photos | sort:"position" %}
+      {% for photo in sorted_photos %}
+      <div class="pp-image">
+        <img class="pp-image__file" src="{{ photo.file }}" alt="{{ photo.title }}">
+
+        {% if photo.ig-url %}
+          <div class="pp-image__caption">
+              <a href="{{ photo.ig-url }}" class="pp-image__link">Auf Instagram ansehen<img src="" alt="" srcset="" class="pp-image__icon"></a>
+          </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
