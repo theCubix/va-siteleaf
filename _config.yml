@@ -32,10 +32,10 @@ defaults:
     type: videos
   values:
     id: ''
-    thumbnail-base: 'https://img.youtube.com/vi/'
-    thumbnail-quality: '/maxresdefault.jpg'
-    embed-base: 'https://www.youtube.com/embed/'
-    embed-options: '?autoplay=1'
+    thumbnail-base: https://img.youtube.com/vi/
+    thumbnail-quality: "/maxresdefault.jpg"
+    embed-base: https://www.youtube.com/embed/
+    embed-options: "?autoplay=1"
 email: info@voltagearc.com
 description: This is an example page.
 baseurl: "/"
