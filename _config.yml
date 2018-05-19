@@ -4,7 +4,7 @@ timezone: Europe/Berlin
 collections:
   photos:
     title: Photos
-    output: true
+    output: false
   posts:
     title: Posts
     output: true
