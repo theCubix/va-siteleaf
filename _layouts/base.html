@@ -21,6 +21,8 @@
 </head>
 {% if page.url == '/' %}
 <body class="index">
+{% elsif page.url == '/gallery/' %}
+<body class="gallery">
 {% else %}
 <body>
 {% endif %}
@@ -31,6 +33,9 @@
 
   {% include footer.html %}
 </main>
+  {% if page.url == '/gallery/' %}
+  <script src="../tools/lightense.min.js"></script>
+  {% endif %}
   <script src="/js/bundle.js"></script>
 </body>
 </html>
