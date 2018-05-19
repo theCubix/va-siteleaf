@@ -17,7 +17,7 @@ layout: base
 
         {% if photo.ig-url %}
           <div class="pp-image__caption">
-              <a href="{{ photo.ig-url }}" class="pp-image__link">Auf Instagram ansehen<img src="{{ site.url }}/uploads/assets/open-link-icon.svg" alt="Open Link" class="pp-image__icon"></a>
+              <a href="{{ photo.ig-url }}" class="pp-image__link" target="_blank"><span>Auf Instagram ansehen</span><img src="{{ site.url }}/uploads/assets/open-link-icon.svg" alt="Open Link" class="no-lightense pp-image__icon"></a>
           </div>
         {% endif %}
       </div>
