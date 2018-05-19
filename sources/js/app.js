@@ -175,7 +175,7 @@ var videos = document.querySelectorAll('.vp-video');
 */
 
   window.addEventListener('load', function () {
-    Lightense('img', {
+    Lightense('img:not(.no-lightense)', {
       time: 300,
       offset: 40,
       background: 'rgba(0, 0, 0, 0.8)'
